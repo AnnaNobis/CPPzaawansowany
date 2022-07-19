@@ -1,0 +1,25 @@
+﻿  PositiveNumber.cpp
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(57,27): warning C4566: character represented by universal-character-name '\u00A3' cannot be represented in the current code page (1250)
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(76,33): error C2039: '+': is not a member of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(4): message : see declaration of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(78,2): error C3861: 'add': identifier not found
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(79,10): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(86,27): warning C4566: character represented by universal-character-name '\u00A3' cannot be represented in the current code page (1250)
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(104,33): error C2039: '-': is not a member of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(4): message : see declaration of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(106,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(107,10): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(110,33): error C2039: '+': is not a member of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(4): message : see declaration of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(112,2): error C3861: 'add': identifier not found
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(115,33): error C2039: '-': is not a member of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(4): message : see declaration of 'PositiveNumber'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.cpp(117,2): error C3861: 'substract': identifier not found
+  Zadanie2.cpp
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\Zadanie2.cpp(18,37): error C2678: binary '-': no operator found which takes a left-hand operand of type 'PositiveNumber' (or there is no acceptable conversion)
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(41,17): message : could be 'PositiveNumber &operator -(double,const PositiveNumber &)'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\Zadanie2.cpp(18,37): message : while trying to match the argument list '(PositiveNumber, double)'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\Zadanie2.cpp(20,53): error C2678: binary '+': no operator found which takes a left-hand operand of type 'PositiveNumber' (or there is no acceptable conversion)
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\PositiveNumber.hpp(40,17): message : could be 'PositiveNumber &operator +(double,const PositiveNumber &)'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Zadanie2\Zadanie2.cpp(20,53): message : while trying to match the argument list '(PositiveNumber, PositiveNumber)'
+  Generating Code...

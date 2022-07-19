@@ -1,0 +1,11 @@
+﻿  Wyjatki.cpp
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(26,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(26,8): error C2146: syntax error: missing ';' before identifier 'readParamenters'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(27,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(27,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(46,12): error C2146: syntax error: missing ';' before identifier 'vect'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(46,12): error C2065: 'vect': undeclared identifier
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(49,9): error C2065: 'vect': undeclared identifier
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(49,33): error C2660: 'readParamenters': function does not take 1 arguments
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(6,5): message : see declaration of 'readParamenters'
+C:\Users\anian\source\kursSDA\ZaawansowanyCPP\ZaawansowanyCPP\Wyjatki\Wyjatki.cpp(75,22): warning C4129: 'm': unrecognized character escape sequence
