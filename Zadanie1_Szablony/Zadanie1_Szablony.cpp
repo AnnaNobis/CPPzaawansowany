@@ -8,16 +8,14 @@
 //C.  Dodaj specjalizacjê szablonu funkcji max() dla typu char* (i const char*) (³añcuchy znaków).
 //Do porównywanie ³añichów znaków slu¿y strcmp
 
-//D. Napisz klase StaticTable, która bêdzie mog³a przechowywaæ N elementów dowolnego typu.
-//Napisz specjalizacjê dla wskaŸników.
-//Napisz specjalizacjê dla N = 0.
+
 
 
 #include <iostream>
 #include <string.h>
 
 template<typename T>
-T max(T a, T b)
+T max(T a, T b) //szablon
 {
     if (a>b)
     {
@@ -32,13 +30,13 @@ T max(T a, T b)
 }
 
 template<typename T>
-T* max(T* a, T* b)
+T* max(T* a, T* b) //specjalizacja czêœciowa 
 {
     return *a > *b ? a : b;
 }
 
-template<>
-char* max(char* a, char* b) // podpunkt C
+template<> 
+char* max(char* a, char* b) // specjalizacja pe³na; podpunkt C
 {
     if (strcmp(a, b) > 0) //int strcmp( const char *lhs, const char *rhs ); Compares two null - terminated byte strings lexicographically.
     {
@@ -68,6 +66,49 @@ T max(T* data, const unsigned int n)
 
 
 }
+template <typename T1>
+class A
+{
+    T1 fieldA;
+    T1 funA();
+
+};
+
+template <typename T1>
+class B : A<T1>
+{
+    T1 fieldB;
+    void funB(T1 a, T1 b);
+};
+
+class C :A<int> //C nie jest szablonem
+{
+
+};
+
+template <typename T1>
+class D : A<float>
+{
+    T1 fieldD;
+};
+
+
+template <typename T1, typename T2>
+class E : A<T2>
+{
+    T1 fieldE;
+};
+
+
+class F 
+{
+    int fieldF;
+
+    template <typename T>
+    void funF(T p);
+
+};
+
 
 int main()
 {
@@ -87,5 +128,17 @@ int main()
     const unsigned int size = 10;
     int tab[size] = { 0,412,123,12,32,11,23,56,1,555 };
     std::cout << "Najwiejszy element tablicy to: " << max(tab,size) << std::endl;
+
+
+    A<int> objA1;
+    A<bool> objA2;
+    A<std::string>objA3;
+    E<double, bool> objE;
+    D<F> objD;
+
+    B<std::string>objB;
+
+
+
 }
 
