@@ -89,10 +89,35 @@ int main()
 
 		//f)
 
+		std::cout << "f) Skopiuj do drugiego wektora wszystkie liczby wiêksze od 90 i mniejsze od - 90" << std::endl;
+
+
+		std::vector<int> nowyVector;
+	
+		std::copy_if(nowyVector.begin(), nowyVector.end(),
+			std::ostream_iterator<int>(std::cout, " "),
+			[](int x) { return (x > 90 || x <-90); });
+
+		nowyVector.clear();
+		std::copy_if(liczby.begin(), liczby.end(),
+			std::back_inserter(nowyVector),
+			[](int x) { return (x > 90 || x < -90);  });
 
 		
+		std::cout << "Nowy wektor zawiera liczby: " << std::endl;
+		
+		printVector(nowyVector);
 
+
+		//g)
+
+		std::cout << "g) Skopiuj do innego wektora 10 kolejnych liczb zaczynaj¹c od 78" << std::endl;
+
+		/*std::vector<int> vector3;
+		std::copy_n(liczby.78, 10, vector3.begin());
+		std::cout << std::accumulate(v_out.begin(), v_out.end(), 0) << '\n';
 	
+	*/
 
 
 	return 0;
