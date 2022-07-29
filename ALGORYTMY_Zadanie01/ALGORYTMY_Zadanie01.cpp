@@ -7,21 +7,51 @@
 #include <string>
 #include <algorithm>
 
-std::string text = "Hello World";
-
-void sayHello()
+void hello()
 {
     std::cout << "Hello World";
 }
 
-auto cwiczeLambde = [](std::string text) {return  text; };
+void print(std::string text)
+{
+    std::cout << text;
+}
+
+auto cwiczeLambde = []() { std::cout << "Hello World"; };
+
+int add(int a, int b)
+{
+    return a + b;
+}
 
 int main()
 {
-sayHello();
+
+    //a)
+
+print("Hello World1");
+std::cout << std::endl;
+cwiczeLambde();
 std::cout << std::endl;
 
 
+
+
+//b)
+
+std::cout << "SUMA: " << add(1, 2) << std::endl;
+auto addTwoNumbers = [](int a, int b) {return a + b; };
+
+
+//WSKANIKI NA FUNKCJÊ:
+auto helloFunc = hello;//wskaznik na funkcje hello przy uzyciu auto
+helloFunc();
+helloFunc();
+void(*PtrName)() = hello; //archaizm
+PtrName(); //wywo³anie funkcji
+
+int (*addPtrFunc)(int, int) = add;
+std::cout << "SUMA1: " << addPtrFunc(5, 6) << std::endl;
 
 
 return 0;
