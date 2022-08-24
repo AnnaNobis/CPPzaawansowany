@@ -35,8 +35,6 @@ cwiczeLambde();
 std::cout << std::endl;
 
 
-
-
 //b)
 
 std::cout << "SUMA: " << add(1, 2) << std::endl;

@@ -1,13 +1,13 @@
-// ALGORYTMY_Zadanie03.cpp : 
+ï»¿// ALGORYTMY_Zadanie03.cpp : 
 // Zad 0.3
-//Utwórz wektor liczb ca³kowitych od - 100 do 100.
-//a) Nastêpnie sprawdŸ czy wszystkie liczby s¹ dodatnie.
+//UtwÃ³rz wektor liczb caÅ‚kowitych od - 100 do 100.
+//a) NastÄ™pnie sprawdÅº czy wszystkie liczby sÄ… dodatnie.
 //b) Czy istnieje jakakolwiek liczba podzielna przez 3, 5 i 30.
-//c) Usuñ z kontenera 0.
-//d) Nastêpnie sprawdŸ czy kontener nie zawiera wartoœci 0.
-//e) SprawdŸ czy kontener jest posortowany
-//f) Skopiuj do drugiego wektora wszystkie liczby wiêksze od 90 i mniejsze od - 90
-//g) Skopiuj do innego wektora 10 kolejnych liczb zaczynaj¹c od 78
+//c) UsuÅ„ z kontenera 0.
+//d) NastÄ™pnie sprawdÅº czy kontener nie zawiera wartoÅ›ci 0.
+//e) SprawdÅº czy kontener jest posortowany
+//f) Skopiuj do drugiego wektora wszystkie liczby wiÄ™ksze od 90 i mniejsze od - 90
+//g) Skopiuj do innego wektora 10 kolejnych liczb zaczynajÄ…c od 78
 ////
 
 #include <iostream>
@@ -34,17 +34,17 @@ int main()
 	std::vector <int> liczby(201);
 	std::iota(liczby.begin(), liczby.end(), ( - 100));
 
-	std::for_each(liczby.rbegin(), liczby.rend(), [](const int i) {std::cout << i << " ; "<< std::endl; });
+	std::for_each(liczby.begin(), liczby.end(), [](const int i) {std::cout << i << " ; "<< std::endl; });
 
 //a) 
 	
-	std::cout << "a. Nastêpnie sprawdŸ czy wszystkie liczby s¹ dodatnie." << std::endl;
+	std::cout << "a. NastÄ™pnie sprawdÅº czy wszystkie liczby sÄ… dodatnie." << std::endl;
 
 	
 
 	if (std::any_of(liczby.cbegin(), liczby.cend(), [](int i) {return i < 0; }))
 	{
-	 std::cout << "Nie wszystkie liczby s¹ dodatnie"<< std:: endl;
+	 std::cout << "Nie wszystkie liczby sÄ… dodatnie"<< std:: endl;
 		}
 	
 
@@ -73,7 +73,7 @@ int main()
 
 		//c) i d) i e) - jest posortowany
 
-		std::cout << "c) Usuñ z kontenera 0. Nastêpnie sprawdŸ czy kontener nie zawiera wartoœci 0.  " << std::endl;
+		std::cout << "c) UsuÅ„ z kontenera 0. NastÄ™pnie sprawdÅº czy kontener nie zawiera wartoÅ›ci 0.  " << std::endl;
 
 
 		for (std::vector<int>::iterator it = liczby.begin(); it != liczby.end(); ) {
@@ -89,7 +89,7 @@ int main()
 
 		//f)
 
-		std::cout << "f) Skopiuj do drugiego wektora wszystkie liczby wiêksze od 90 i mniejsze od - 90" << std::endl;
+		std::cout << "f) Skopiuj do drugiego wektora wszystkie liczby wiÄ™ksze od 90 i mniejsze od - 90" << std::endl;
 
 
 		std::vector<int> nowyVector;
@@ -111,14 +111,28 @@ int main()
 
 		//g)
 
-		std::cout << "g) Skopiuj do innego wektora 10 kolejnych liczb zaczynaj¹c od 78" << std::endl;
+		std::cout << "g) Skopiuj do innego wektora 10 kolejnych liczb zaczynajÄ…c od 78" << std::endl;
 
-		/*std::vector<int> vector3;
-		std::copy_n(liczby.78, 10, vector3.begin());
-		std::cout << std::accumulate(v_out.begin(), v_out.end(), 0) << '\n';
+		std::vector<int> vector3;
+		std::copy_n(liczby.begin(), 10, vector3.begin());
+		std::cout << std::accumulate(vector3.begin(), vector3.end(), 0) << '\n';
 	
-	*/
+	
+		////g) Skopiuj do innego wektora 10 kolejnych liczb zaczynajÂ¹c od 78
+		//std::cout << std::endl << std::endl;
+		//std::vector<int> thirdVect;
 
+		//for_each(vect.begin(), vect.end(), [](int& n) {std::cout << n << " "; });
+		//std::cout << std::endl;
+		//std::cout << std::endl << std::endl;
+
+		//auto it = find(vect.begin(), vect.end(), 78);
+		//auto itEnd = find(vect.begin(), vect.end(), 78) + 10;
+
+		//std::copy(it, itEnd, std::back_inserter(thirdVect));
+		//for (int n : thirdVect)
+		//	std::cout << n << ' ';
+		//std::cout << std::endl;
 
 	return 0;
 }

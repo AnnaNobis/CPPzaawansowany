@@ -14,7 +14,7 @@
 #include <algorithm>
 #include <cmath>
 #include <numeric>
-
+#include <iterator>
 
 
 void printLiczby(const int value)
@@ -52,7 +52,7 @@ int main()
     //a)
     std::cout << " a) Wypisz wszystkie liczby(for_each + unary function)" << std::endl;
 
-    
+
     std::vector <int> liczby(100);
 
     std::iota(liczby.begin(), liczby.end(), 1);
@@ -79,9 +79,9 @@ int main()
             }
         });
 
-   
+
     //c)
-    
+
     std::cout << "c) Nastêpnie policz ile jest liczb wiêkszych ni¿ 4 (count_if + predykat)" << std::endl;
 
 
@@ -102,7 +102,7 @@ int main()
 
 
     //e)
-    
+
     std::cout << "e) W zale¿noœci od zmiennej lokalnej dzielnik wypisz wszystkie liczby podzielne przez niego(for_each + lambda)" << std::endl;
 
     int dzielnik = 3;
@@ -116,7 +116,7 @@ int main()
 
     std::for_each(liczby.cbegin(), liczby.cend(), divByDzielnik);
 
-    std::for_each(liczby.cbegin(), liczby.cend(), 
+    std::for_each(liczby.cbegin(), liczby.cend(),
         [&dzielnik](int i)
         {
             if ((i % dzielnik) == 0)
@@ -127,17 +127,32 @@ int main()
 
 
     //f)
-std::cout << "f) Zlicz sumê wszystkich liczb parzystych i zapisz j¹ do zmiennej lokalnej int sum" << std::endl;
- 
+    std::cout << "f) Zlicz sumê wszystkich liczb parzystych i zapisz j¹ do zmiennej lokalnej int sum" << std::endl;
+
     int sum = 0;
 
- std::for_each(liczby.cbegin(), liczby.cend(),
-     [&sum](int i) 
-     {
-	 if (i % 2 == 0)
-		 sum += i; 
-     });
- std::cout << "Suma liczby parzystych to: " << sum << std::endl;
+    std::for_each(liczby.cbegin(), liczby.cend(),
+        [&sum](int i)
+        {
+            if (i % 2 == 0)
+                sum += i;
+        });
+    std::cout << "Suma liczby parzystych to: " << sum << std::endl;
+
+    //wersja z acumulate
+
+    auto sumOdd = [](int a, int b) {
+        if (b % 2 == 0)
+            return a + b;
+        else
+            return a; };
+
+    int result = std::accumulate(liczby.cbegin(), liczby.cend(), 0, sumOdd);
+
+    std::cout << std::endl << "RESULT = " << result << std::endl;
+    
+ 
+
 }
 
 
