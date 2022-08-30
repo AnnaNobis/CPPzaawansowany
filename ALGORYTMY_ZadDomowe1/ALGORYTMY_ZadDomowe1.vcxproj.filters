@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ALGORYTMY_ZadDomowe1.cpp">
+    <ClCompile Include="ALGORYTMY_ZadDomowe1do13.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
